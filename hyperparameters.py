@@ -23,8 +23,8 @@ class args():
     hidden_dim = 300
     optimizer = 'Adam'
     CRF = True
-    lrt = 0.001
-    clipt = 5.0
+    lr = 0.001
+    clip = 5.0
     dropout = 0.5
     update_embedding = True
     pretrain_embedding = 'random'
