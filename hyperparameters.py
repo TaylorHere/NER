@@ -16,8 +16,8 @@ config.gpu_options.per_process_gpu_memory_fraction = 0.2  # need ~700MB GPU memo
 
 ## hyperparameters
 class args():
-    train_data = 'NER/data_path'
-    test_data = 'NER/data_path'
+    train_data = 'data_path'
+    test_data = 'data_path'
     batch_size = 64
     epoch = 40
     hidden_dim = 300
@@ -30,7 +30,7 @@ class args():
     pretrain_embedding = 'random'
     embedding_dim = 300
     shuffle = True
-    mode = 'demo'
+    mode = 'train'
     demo_model = '1521112368'
 
 
