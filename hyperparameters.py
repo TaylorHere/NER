@@ -15,22 +15,23 @@ config.gpu_options.per_process_gpu_memory_fraction = 0.2  # need ~700MB GPU memo
 
 
 ## hyperparameters
-train_data = 'NER/data_path'
-test_data = 'NER/data_path'
-batch_size = 64
-epoch = 40
-hidden_dim = 300
-optimizer = 'Adam'
-CRFbool = True
-lrt = 0.001
-clipt = 5.0
-dropoutt = 0.5
-update_embeddingbool = True
-pretrain_embedding = 'random'
-embedding_dim = 300
-shufflebool = True
-mode = 'demo'
-demo_model = '1521112368'
+class args():
+    train_data = 'NER/data_path'
+    test_data = 'NER/data_path'
+    batch_size = 64
+    epoch = 40
+    hidden_dim = 300
+    optimizer = 'Adam'
+    CRF = True
+    lrt = 0.001
+    clipt = 5.0
+    dropout = 0.5
+    update_embedding = True
+    pretrain_embedding = 'random'
+    embedding_dim = 300
+    shuffle = True
+    mode = 'demo'
+    demo_model = '1521112368'
 
 
 ## get char embeddings
