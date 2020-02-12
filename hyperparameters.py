@@ -15,24 +15,22 @@ config.gpu_options.per_process_gpu_memory_fraction = 0.2  # need ~700MB GPU memo
 
 
 ## hyperparameters
-parser = argparse.ArgumentParser(description='BiLSTM-CRF for Chinese NER task')
-parser.add_argument('--train_data', type=str, default='data_path', help='train data source')
-parser.add_argument('--test_data', type=str, default='data_path', help='test data source')
-parser.add_argument('--batch_size', type=int, default=64, help='#sample of each minibatch')
-parser.add_argument('--epoch', type=int, default=40, help='#epoch of training')
-parser.add_argument('--hidden_dim', type=int, default=300, help='#dim of hidden state')
-parser.add_argument('--optimizer', type=str, default='Adam', help='Adam/Adadelta/Adagrad/RMSProp/Momentum/SGD')
-parser.add_argument('--CRF', type=str2bool, default=True, help='use CRF at the top layer. if False, use Softmax')
-parser.add_argument('--lr', type=float, default=0.001, help='learning rate')
-parser.add_argument('--clip', type=float, default=5.0, help='gradient clipping')
-parser.add_argument('--dropout', type=float, default=0.5, help='dropout keep_prob')
-parser.add_argument('--update_embedding', type=str2bool, default=True, help='update embedding during training')
-parser.add_argument('--pretrain_embedding', type=str, default='random', help='use pretrained char embedding or init it randomly')
-parser.add_argument('--embedding_dim', type=int, default=300, help='random init char embedding_dim')
-parser.add_argument('--shuffle', type=str2bool, default=True, help='shuffle training data before each epoch')
-parser.add_argument('--mode', type=str, default='demo', help='train/test/demo')
-parser.add_argument('--demo_model', type=str, default='1521112368', help='model for test and demo')
-args = parser.parse_args()
+train_data = 'NER/data_path'
+test_data = 'NER/data_path'
+batch_size = 64
+epoch = 40
+hidden_dim = 300
+optimizer = 'Adam'
+CRFbool = True
+lrt = 0.001
+clipt = 5.0
+dropoutt = 0.5
+update_embeddingbool = True
+pretrain_embedding = 'random'
+embedding_dim = 300
+shufflebool = True
+mode = 'demo'
+demo_model = '1521112368'
 
 
 ## get char embeddings
